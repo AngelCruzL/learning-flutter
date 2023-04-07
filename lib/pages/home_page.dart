@@ -9,8 +9,30 @@ class HomePage extends StatelessWidget {
         top: true,
         bottom: true,
         child: Container(
-          alignment: Alignment.bottomCenter,
-          child: Text('Hello World!', style: TextStyle(fontSize: 24)),
+          // This allows us to use the full width of the screen
+          width: double.infinity,
+          color: Colors.white,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Text('Hello World!'),
+              Text(
+                'My name is Ángel Cruz',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Container(
+                height: 1,
+                width: 100,
+                margin: EdgeInsets.symmetric(vertical: 20),
+                color: Color(0xffaaaaaa),
+              )
+            ],
+          ),
         ),
       ),
     );
