@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/widgets/bottom_menu.dart';
 import 'package:my_first_flutter_app/widgets/circle_container.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,6 +7,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      bottomNavigationBar: BottomMenu(items: [
+        BottomMenuItem(iconPath: 'assets/icons/home.svg', label: 'Inicio'),
+        BottomMenuItem(
+            iconPath: 'assets/icons/history.svg', label: 'Historial'),
+        BottomMenuItem(iconPath: 'assets/icons/savings.svg', label: 'Ofertas'),
+        BottomMenuItem(iconPath: 'assets/icons/menu.svg', label: 'Mi Perfil'),
+      ]),
       body: SafeArea(
         top: true,
         bottom: true,
@@ -45,9 +53,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     CircleContainer(
-                        child: Icon(Icons.remove),
-                        width: 55,
-                        height: 55)
+                        child: Icon(Icons.remove), width: 55, height: 55)
                   ])
             ],
           ),
