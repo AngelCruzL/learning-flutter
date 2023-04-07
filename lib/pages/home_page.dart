@@ -11,15 +11,13 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: CircleContainer(
-            child: Text(
-              "Hello World!",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
+            child: Icon(
+              Icons.phone,
+              size: 60,
+              color: Colors.blue,
             ),
-            width: 250,
-            height: 250),
+            width: 150,
+            height: 150),
       ),
     );
   }
