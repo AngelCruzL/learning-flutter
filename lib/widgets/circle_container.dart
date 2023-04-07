@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CircleContainer extends StatelessWidget {
+  final Widget child;
+  final double width, height;
+
+  CircleContainer(
+      {required this.child, required this.width, required this.height});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
-      height: 300,
+      width: width,
+      height: height,
       child: Center(
-        child: Text(
-          "Hello World!",
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        child: this.child,
       ),
       decoration: BoxDecoration(
         color: Color(0xfff0f0f0),
