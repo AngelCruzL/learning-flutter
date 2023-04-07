@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/widgets/circle_container.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -30,7 +31,24 @@ class HomePage extends StatelessWidget {
                 width: 100,
                 margin: EdgeInsets.symmetric(vertical: 20),
                 color: Color(0xffaaaaaa),
-              )
+              ),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Text('14k Likes'),
+                        SizedBox(width: 10),
+                        CircleContainer(
+                            child: Icon(Icons.add), width: 55, height: 55)
+                      ],
+                    ),
+                    CircleContainer(
+                        child: Icon(Icons.remove),
+                        width: 55,
+                        height: 55)
+                  ])
             ],
           ),
         ),
