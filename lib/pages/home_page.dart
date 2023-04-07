@@ -8,7 +8,22 @@ class HomePage extends StatelessWidget {
         title: const Text("My First Flutter App"),
       ),
       body: const Center(
-        child: Text("Hello World!"),
+        child: Text(
+          "Hello\nWorld!",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.w300,
+              letterSpacing: 2.5,
+              color: Colors.blue,
+              shadows: [
+                Shadow(
+                  color: Colors.black,
+                  offset: Offset(1, 1),
+                  blurRadius: 5,
+                ),
+              ]),
+        ),
       ),
     );
   }
