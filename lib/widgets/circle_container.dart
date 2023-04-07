@@ -5,7 +5,10 @@ class CircleContainer extends StatelessWidget {
   final double width, height;
 
   CircleContainer(
-      {required this.child, required this.width, required this.height});
+      {required this.child, required this.width, required this.height})
+      : assert(width == height),
+        assert(width >= 50),
+        assert(height >= 50);
 
   @override
   Widget build(BuildContext context) {
