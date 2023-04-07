@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/circle_container.dart';
 
@@ -11,10 +12,10 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: CircleContainer(
-            child: Icon(
-              Icons.phone,
-              size: 60,
-              color: Colors.blue,
+            child: SvgPicture.asset(
+              'assets/icons/menu-icon.svg',
+              width: 100,
+              height: 100,
             ),
             width: 150,
             height: 150),
