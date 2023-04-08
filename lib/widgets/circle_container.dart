@@ -2,19 +2,16 @@ import 'package:flutter/material.dart';
 
 class CircleContainer extends StatelessWidget {
   final Widget child;
-  final double width, height;
+  final double size;
 
-  CircleContainer(
-      {required this.child, required this.width, required this.height})
-      : assert(width == height),
-        assert(width >= 50),
-        assert(height >= 50);
+  CircleContainer({required this.child, required this.size})
+      : assert(size >= 50);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
-      height: height,
+      width: size,
+      height: size,
       child: Center(
         child: this.child,
       ),

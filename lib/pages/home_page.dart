@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/widgets/avatar.dart';
 import 'package:my_first_flutter_app/widgets/bottom_menu.dart';
 import 'package:my_first_flutter_app/widgets/circle_container.dart';
 
@@ -26,6 +27,8 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
+              Avatar(),
+              SizedBox(height: 20),
               Text('Hello World!'),
               Text(
                 'My name is Ángel Cruz',
@@ -48,12 +51,10 @@ class HomePage extends StatelessWidget {
                       children: <Widget>[
                         Text('14k Likes'),
                         SizedBox(width: 10),
-                        CircleContainer(
-                            child: Icon(Icons.add), width: 55, height: 55)
+                        CircleContainer(child: Icon(Icons.add), size: 55)
                       ],
                     ),
-                    CircleContainer(
-                        child: Icon(Icons.remove), width: 55, height: 55)
+                    CircleContainer(child: Icon(Icons.remove), size: 55)
                   ])
             ],
           ),

@@ -26,8 +26,7 @@ class Avatar extends StatelessWidget {
           Positioned(
             child: CircleContainer(
               child: Icon(Icons.edit),
-              width: 50,
-              height: 50,
+              size: 50,
             ),
             right: 10,
             top: 10,
